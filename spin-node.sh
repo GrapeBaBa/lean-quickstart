@@ -402,7 +402,7 @@ for item in "${spin_nodes[@]}"; do
     else
       docker pull "$docker_image" || true
     fi
-    execCmd="docker run --rm --pull=never"
+    execCmd="docker run --pull=never"
     if [ -n "$dockerWithSudo" ]
     then
       execCmd="sudo $execCmd"
